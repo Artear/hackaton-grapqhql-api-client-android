@@ -1,0 +1,24 @@
+query FeedArticles($articles: [String]!) {
+  feedEntries: articles(ids:$articles) {
+    id
+    type
+    content {
+      id
+      articleId
+      type
+      title {
+        main
+        social
+        headline
+      }
+      dropline {
+        type
+        content
+      }
+      body {
+        type
+        content
+      }
+    }
+  }
+}
