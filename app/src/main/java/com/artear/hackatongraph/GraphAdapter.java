@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.artear.hackatongraph.model.Block;
 
+import org.w3c.dom.Text;
+
 public class GraphAdapter extends ArrayAdapter<Block> {
 
     Context mContext;
