@@ -1,0 +1,18 @@
+query FeedQuery($section: String!) {
+  feedEntries: cover(section: $section) {
+    section
+    title {
+      main
+      social
+      headline
+    }
+    containerList {
+      id
+      type
+      data {
+        id
+        type
+      }
+    }
+  }
+}

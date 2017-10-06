@@ -14,13 +14,15 @@ import com.artear.hackatongraph.model.Block;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 public class GraphAdapter extends ArrayAdapter<Block> {
 
     Context mContext;
     int layoutResourceId;
-    Block data[] = null;
+    List<Block> data = null;
 
-    public GraphAdapter(Context mContext, int layoutResourceId, Block[] data) {
+    public GraphAdapter(Context mContext, int layoutResourceId, List<Block> data) {
 
         super(mContext, layoutResourceId, data);
 
@@ -45,7 +47,7 @@ public class GraphAdapter extends ArrayAdapter<Block> {
         }
 
         // object item based on the position
-        Block objectItem = data[position];
+        Block objectItem = data.get(position);
 
         // get the TextView and then set the text (item name) and tag (item ID) values
         TextView textViewItem = (TextView) convertView.findViewById(R.id.block_title);
